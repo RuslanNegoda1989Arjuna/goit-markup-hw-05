@@ -70,6 +70,8 @@ ul {
   letter-spacing: 0.02em;
   color: #212121;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover,
 .link:focus {
@@ -324,7 +326,18 @@ ul {
 .work-list .item + .item {
   margin-left: 30px;
 }
-.text-img {
+.work-list .text-img {
+  position: absolute;
+  bottom: 0;
+
+  /* content: ''; */
+  display: flex;
+  width: 370px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -335,6 +348,7 @@ ul {
   color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
 }
+
 /*#endregion*/
 /*#region  Наша Команда TEAM*/
 .image {
@@ -394,6 +408,7 @@ ul {
 /* _______socials icons_________*/
 .social-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials {
   display: flex;
@@ -412,6 +427,8 @@ ul {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -534,6 +551,9 @@ ul {
   padding-right: 22px;
   padding-left: 22px;
 }
+/* .button {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 .button:hover,
 .button:focus {
   background-color: var(--color-button);
@@ -544,6 +564,9 @@ ul {
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* PORTFOLIO IMG*/
 .image {
@@ -610,8 +633,11 @@ ul {
 /*________hover portfolio_____*/
 .img-link {
   display: block;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.img-link:hover {
+.img-link:hover,
+.img-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -665,6 +691,7 @@ ul {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
@@ -685,6 +712,8 @@ ul {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*#endregion*/
