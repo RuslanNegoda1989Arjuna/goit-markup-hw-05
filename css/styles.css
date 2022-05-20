@@ -33,6 +33,11 @@ ul {
   --color-button: #2196f3;
   --color-title: #212121;
   --border-img: #eeeeee;
+
+  /* animations */
+  --slow-anim: 600ms ease;
+  --fast-anim: 400ms ease-in-out;
+  --very-fast-anim: 250ms;
 }
 
 /*#region -----HEADER------*/
@@ -193,10 +198,13 @@ ul {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--very-fast-anim), visibility var(--very-fast-anim);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .modal {
@@ -213,10 +221,37 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform 250ms ease-in-out 400ms, opacity 250ms ease-in-out 400ms;
 }
 .button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   display: flex;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+
+  background-color: #fff;
+
+  cursor: pointer;
+}
+/*____________ ANIMATION_______*/
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+.backdrop .modal {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 /*#endregion*/
 /*#region Оссобенности*/
@@ -279,6 +314,8 @@ ul {
   margin-bottom: 50px;
 }
 .work-list {
+  position: relative;
+
   display: flex;
 }
 .our-work {
@@ -286,6 +323,17 @@ ul {
 }
 .work-list .item + .item {
   margin-left: 30px;
+}
+.text-img {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 /*#endregion*/
 /*#region  Наша Команда TEAM*/
