@@ -484,6 +484,8 @@ ul {
 /*#endregion*/
 /*#region PORTFOLIO*/
 .link-portfolio {
+  position: relative;
+
   color: var(--color-button);
   font-family: 'Roboto';
   font-weight: 500;
@@ -491,6 +493,19 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+.link-portfolio::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 .title-portfolio {
   position: absolute;
@@ -596,12 +611,27 @@ ul {
   font-style: normal;
 }
 .link-studio {
+  position: relative;
+
   color: var(--color-button);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+.link-studio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
 }
 .list-img {
   display: flex;
